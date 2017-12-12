@@ -1,6 +1,5 @@
 (function() {
     'use strict';
-
     angular
         .module('app.customers')
         .controller('CustomerDetail', CustomerDetail);
@@ -18,8 +17,7 @@
         vm.title = 'Customer Detail';
 
         activate();
-
-        function activate() {
+      function activate() {
             return getCustomer($stateParams.id).then(function() {
                 logger.info('Activated Customer Detail View');
             });
